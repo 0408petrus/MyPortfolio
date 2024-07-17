@@ -88,6 +88,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
       item.addEventListener('click', event => {
           const infoKey = event.currentTarget.getAttribute('data-info');
           experienceDetails.innerHTML = experiences[infoKey];
+      });
+  });
+
+  document.querySelectorAll('[edu-info]').forEach(item => {
+      item.addEventListener('click', event => {
+          const infoKey = event.currentTarget.getAttribute('edu-info');
           educationDetails.innerHTML = educations[infoKey];
       });
   });
