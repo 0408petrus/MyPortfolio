@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', (event) => {
   const experienceDetails = document.getElementById('experience-details');
+  const educationDetails = document.getElementById('education-details');
   
   const experiences = {
       'lcvm-usu': `
@@ -54,10 +55,40 @@ document.addEventListener('DOMContentLoaded', (event) => {
       `
   };
 
+  const educations = {
+    'high-school': `
+        <h4 class="text-2xl font-bold text bg-gray-800">SMAN 2 Balige</h4>
+        <h5 class="text-sm font-light">Balige, North Sumatera</h5>
+        <p class="mt-5 text-light text-gray-200">Aug 2016 - Aug 2019 : Student</p>
+        <div class="mt-2">
+            <span class="border-white border border-solid px-2 py-1 rounded-md text-sm font-mono">Science</span>
+        </div>
+        <hr class="my-5">
+        <ul class="list-disc list-inside leading-10 font">
+            <li>One of the best high-school in North Sumatera</li>
+            <li>Grade A+ (3.85)</li>
+        </ul>
+    `,
+    'university': `
+        <h4 class="text-2xl font-bold text bg-gray-800">Universitas Sumatera Utara</h4>
+        <h5 class="text-sm font-light">Medan, North Sumatera</h5>
+        <p class="mt-5 text-light text-gray-200">Sept 2020 - May 2024 : College Student</p>
+        <div class="mt-2">
+            <span class="border-white border border-solid px-2 py-1 rounded-md text-sm font-mono">Computer Science</span>
+        </div>
+        <hr class="my-5">
+        <ul class="list-disc list-inside leading-10 font">
+            <li>Achieve GPA(3.95)</li>
+            <li>Complete Bachelor Degree of Computer Science in 3.8 years</li>
+        </ul>
+    `
+};
+
   document.querySelectorAll('[data-info]').forEach(item => {
       item.addEventListener('click', event => {
           const infoKey = event.currentTarget.getAttribute('data-info');
           experienceDetails.innerHTML = experiences[infoKey];
+          educationDetails.innerHTML = educations[infoKey];
       });
   });
 });
