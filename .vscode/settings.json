@@ -2,7 +2,7 @@
     "window.zoomLevel": 1,
     "editor.fontSize": 12,
     "workbench.iconTheme": "eq-material-theme-icons-darker",
-    "livePreview.defaultPreviewPath": "/index.html",
+    "livePreview.defaultPreviewPath": "/public/index.html",
     "terminal.integrated.fontSize": 16,
     "editor.tabSize": 2
 }
