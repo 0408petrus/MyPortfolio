@@ -98,3 +98,24 @@ document.addEventListener('DOMContentLoaded', (event) => {
       });
   });
 });
+
+const nameElement = document.getElementById('name');
+const nameText = 'Marcelino';
+let index = 0;
+
+function typeWriter() {
+    if (index < nameText.length) {
+        nameElement.innerHTML += nameText.charAt(index);
+        index++;
+        setTimeout(typeWriter, 100);
+    } else {
+        setTimeout(() => {
+            nameElement.innerHTML = '';
+            index = 0;
+            typeWriter();
+        }, 3000);
+    }
+}
+
+typeWriter();
+
